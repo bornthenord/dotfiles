@@ -3,3 +3,6 @@ import = [
 	"~/.config/alacritty/keybindings.toml",
 	"~/.config/alacritty/theme.toml"
 ]
+
+[selection]
+save_to_clipboard = true

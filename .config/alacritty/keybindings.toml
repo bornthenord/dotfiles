@@ -1,0 +1,4 @@
+[keyboard]
+bindings = [
+	{ key = "Space", mods = "Option", action = "ToggleViMode" },
+]
