@@ -1,0 +1,91 @@
+[
+    // extensions
+    {
+        "key": "cmd+x",
+        "command": "workbench.view.extensions"
+    },
+    // explorer
+    {
+        "key": "alt+a",
+        "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "cmd+e",
+        "command": "workbench.view.explorer",
+    },
+    {
+        "key": "cmd+n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    // terminal
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.terminal.toggleTerminal",
+    },
+    {
+        "key": "cmd+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    // source control
+    {
+        "key": "cmd+s",
+        "command": "workbench.view.scm"
+    },
+    // search
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "cmd+shift+r",
+        "command": "workbench.action.showAllSymbols"
+    },
+    // context menu
+    {
+        "key": "alt+enter",
+        "command": "editor.action.showContextMenu",
+        "when": "editorTextFocus"
+    },
+    // editor
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.splitEditor",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+b",
+        "command": "editor.action.quickFix"
+    },
+    {
+        "key": "g+d",
+        "command": "editor.action.revealDefinition"
+    },
+    {
+        "key": "cmd+o",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+p",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "cmd+o",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "alt+space",
+        "command": "workbench.action.quickOpen"
+    },
+]
