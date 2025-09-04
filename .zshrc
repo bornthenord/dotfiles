@@ -112,5 +112,3 @@ function y() {
 }
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=cyan'
-
-tmux
