@@ -1,91 +1,195 @@
 [
-    // extensions
-    {
-        "key": "cmd+x",
-        "command": "workbench.view.extensions"
-    },
+    //
     // explorer
-    {
-        "key": "alt+a",
-        "command": "workbench.files.action.showActiveFileInExplorer"
-    },
+    //
     {
         "key": "cmd+e",
-        "command": "workbench.view.explorer",
+        "command": "workbench.explorer.fileView.focus",
     },
     {
-        "key": "cmd+n",
+        "key": "g",
+        "command": "list.focusFirst",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "alt+g",
+        "command": "list.focusLast",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "o",
+        "command": "explorer.openAndPassFocus",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "q",
+        "command": "workbench.action.focusLastEditorGroup",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "n",
         "command": "explorer.newFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
     {
-        "key": "shift+cmd+n",
+        "key": "alt+n",
         "command": "explorer.newFolder",
         "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
-    // terminal
     {
-        "key": "cmd+t",
-        "command": "workbench.action.terminal.toggleTerminal",
+        "key": "f",
+        "command": "list.find",
+        "when": "listFocus"
     },
     {
-        "key": "cmd+n",
-        "command": "workbench.action.terminal.new",
-        "when": "terminalFocus"
+        "key": "alt+f",
+        "command": "filesExplorer.findInWorkspace",
+        "when": "listFocus"
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "listFocus"
+    },
+    {
+        "key": "x",
+        "command": "filesExplorer.cut",
+        "when": "listFocus"
+    },
+    {
+        "key": "u",
+        "command": "filesExplorer.cancelCut",
+        "when": "listFocus"
+    },
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "listFocus"
+    },
+    {
+        "key": "y",
+        "command": "filesExplorer.copy",
+        "when": "listFocus"
+    },
+    {
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "listFocus"
+    },
+    {
+        "key": "c",
+        "command": "csharpextensions.createClass",
+        "when": "listFocus"
+    },
+    {
+        "key": "i",
+        "command": "csharpextensions.createInterface",
+        "when": "listFocus"
+    },
+    //
+    // editor
+    //
+    {
+        "key": "cmd+,",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+.",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "workbench.action.quickTextSearch"
+    },
+    {
+        "key": "cmd+f",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "alt+q",
+        "command": "editor.action.quickFix"
+    },
+    {
+        "key": "alt+.",
+        "command": "editor.gotoNextFold",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+,",
+        "command": "editor.gotoPreviousFold",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+f",
+        "command": "editor.action.format",
+        "when": "editorFocus"
+    },
+    //
+    // terminal
+    //
+    {
+        "key": "cmd+c",
+        "command": "workbench.action.terminal.toggleTerminal",
     },
     {
         "key": "cmd+w",
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus"
     },
+    {
+        "key": "cmd+f",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "terminalFocus"
+    },
+    //
     // source control
+    //
     {
-        "key": "cmd+s",
-        "command": "workbench.view.scm"
+        "key": "cmd+g",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.scm.focus",
+                "workbench.scm.action.setTreeViewMode",
+                "workbench.scm.action.focusNextResourceGroup"
+
+            ]
+        }
     },
-    // search
     {
-        "key": "cmd+r",
-        "command": "workbench.action.gotoSymbol"
+        "key": "shift+,",
+        "command": "workbench.action.compareEditor.previousChange",
+        "when": "workbench.scm.visible"
     },
     {
-        "key": "cmd+shift+r",
-        "command": "workbench.action.showAllSymbols"
-    },
-    // context menu
-    {
-        "key": "alt+enter",
-        "command": "editor.action.showContextMenu",
-        "when": "editorTextFocus"
-    },
-    // editor
-    {
-        "key": "ctrl+n",
-        "command": "workbench.action.splitEditor",
-        "when": "!terminalFocus"
+        "key": "shift+.",
+        "command": "workbench.action.compareEditor.nextChange",
+        "when": "workbench.scm.visible"
     },
     {
         "key": "cmd+b",
-        "command": "editor.action.quickFix"
+        "command": "git.checkout"
     },
+    //
+    // testing
+    //
     {
-        "key": "g+d",
-        "command": "editor.action.revealDefinition"
+        "key": "cmd+t",
+        "command": "workbench.view.testing.focus"
     },
+    //
+    // context menu
+    //
     {
-        "key": "cmd+o",
-        "command": "workbench.action.navigateBack"
+        "key": "alt+enter",
+        "command": "editor.action.showContextMenu",
+        // "when": "editorTextFocus"
     },
-    {
-        "key": "cmd+p",
-        "command": "workbench.action.navigateForward"
-    },
-    {
-        "key": "cmd+o",
-        "command": "workbench.action.navigateBack"
-    },
-    {
-        "key": "alt+space",
-        "command": "workbench.action.quickOpen"
-    },
+    //
+    // dotnet
+    ///
+    // {
+    //     "key": "cmd+r",
+    //     "command": "testing.run"
+    // }
 ]
