@@ -22,6 +22,14 @@
         "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     },
     {
+        "key": "t",
+        "command": "workbench.action.terminal.newWithCwd",
+        "args": {
+            "cwd": "${fileDirname}"
+        },
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
         "key": "q",
         "command": "workbench.action.focusLastEditorGroup",
         "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
@@ -35,6 +43,16 @@
         "key": "alt+n",
         "command": "explorer.newFolder",
         "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "a",
+        "command": "csharpextensions.createClass",
+        "when": "listFocus"
+    },
+    {
+        "key": "alt+a",
+        "command": "csharpextensions.createInterface",
+        "when": "listFocus"
     },
     {
         "key": "f",
@@ -76,18 +94,8 @@
         "command": "filesExplorer.paste",
         "when": "listFocus"
     },
-    {
-        "key": "c",
-        "command": "csharpextensions.createClass",
-        "when": "listFocus"
-    },
-    {
-        "key": "i",
-        "command": "csharpextensions.createInterface",
-        "when": "listFocus"
-    },
     //
-    // editor
+    // file navigation
     //
     {
         "key": "cmd+,",
@@ -105,8 +113,11 @@
         "key": "cmd+f",
         "command": "workbench.action.quickOpen"
     },
+    //
+    // text edit
+    //
     {
-        "key": "alt+q",
+        "key": "alt+h",
         "command": "editor.action.quickFix"
     },
     {
@@ -124,20 +135,25 @@
         "command": "editor.action.format",
         "when": "editorFocus"
     },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.showContextMenu",
+        "when": "editorFocus"
+    },
     //
     // terminal
     //
     {
-        "key": "cmd+c",
+        "key": "cmd+t",
         "command": "workbench.action.terminal.toggleTerminal",
     },
     {
-        "key": "cmd+w",
+        "key": "alt+k",
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus"
     },
     {
-        "key": "cmd+f",
+        "key": "alt+m",
         "command": "workbench.action.toggleMaximizedPanel",
         "when": "terminalFocus"
     },
@@ -145,14 +161,17 @@
     // source control
     //
     {
-        "key": "cmd+g",
+        "key": "cmd+b",
+        "command": "git.checkout"
+    },
+    {
+        "key": "cmd+s",
         "command": "runCommands",
         "args": {
             "commands": [
                 "workbench.scm.focus",
                 "workbench.scm.action.setTreeViewMode",
                 "workbench.scm.action.focusNextResourceGroup"
-
             ]
         }
     },
@@ -166,30 +185,11 @@
         "command": "workbench.action.compareEditor.nextChange",
         "when": "workbench.scm.visible"
     },
-    {
-        "key": "cmd+b",
-        "command": "git.checkout"
-    },
     //
     // testing
     //
     {
-        "key": "cmd+t",
+        "key": "cmd+u",
         "command": "workbench.view.testing.focus"
     },
-    //
-    // context menu
-    //
-    {
-        "key": "alt+enter",
-        "command": "editor.action.showContextMenu",
-        // "when": "editorTextFocus"
-    },
-    //
-    // dotnet
-    ///
-    // {
-    //     "key": "cmd+r",
-    //     "command": "testing.run"
-    // }
 ]

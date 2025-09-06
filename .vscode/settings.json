@@ -5,6 +5,10 @@
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
+    //
+    // file edit
+    //
+    "files.autoSave": "afterDelay",
     "workbench.editor.enablePreview": true,
     //
     // git
@@ -128,4 +132,5 @@
             "statusBarItem.remoteHoverForeground": "#000000"
         }
     },
+    "terminal.integrated.stickyScroll.enabled": true,
 }
