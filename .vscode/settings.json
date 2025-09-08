@@ -10,6 +10,11 @@
     //
     "files.autoSave": "afterDelay",
     "workbench.editor.enablePreview": true,
+    "dotnet.automaticallySyncWithActiveItem": true,
+    "explorer.autoReveal": true,
+    "editor.rulers": [
+        120
+    ],
     //
     // git
     //
@@ -63,8 +68,6 @@
             "when": "editorTextFocus && vim.active"
         }
     ],
-    // theme
-    "workbench.activityBar.location": "hidden",
     "workbench.editor.showTabs": "single",
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
@@ -133,4 +136,7 @@
         }
     },
     "terminal.integrated.stickyScroll.enabled": true,
+    "workbench.activityBar.location": "hidden",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.renderSideBySide": false,
 }

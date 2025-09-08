@@ -4,95 +4,96 @@
     //
     {
         "key": "cmd+e",
-        "command": "workbench.explorer.fileView.focus",
+        "command": "solutionExplorer.focus",
+        "when": "!solutionExplorer.visible"
     },
     {
-        "key": "g",
-        "command": "list.focusFirst",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+        "key": "cmd+e",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "solutionExplorer.removeView",
+                "workbench.explorer.fileView.focus"
+            ]
+        },
+        "when": "solutionExplorer.visible"
+    },
+    {
+        "key": "Escape",
+        "command": "workbench.action.focusLastEditorGroup",
+        "when": "solutionExplorer.active && !inputFocus && !findInputFocussed"
     },
     {
         "key": "alt+g",
+        "command": "list.focusFirst",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && !findInputFocussed"
+    },
+    {
+        "key": "shift+alt+g",
         "command": "list.focusLast",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && !findInputFocussed"
     },
     {
-        "key": "o",
-        "command": "explorer.openAndPassFocus",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-    },
-    {
-        "key": "t",
+        "key": "alt+t",
         "command": "workbench.action.terminal.newWithCwd",
         "args": {
             "cwd": "${fileDirname}"
         },
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-    },
-    {
-        "key": "q",
-        "command": "workbench.action.focusLastEditorGroup",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-    },
-    {
-        "key": "n",
-        "command": "explorer.newFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+        "when": "solutionExplorer.visible && !inputFocus && !findInputFocussed"
     },
     {
         "key": "alt+n",
+        "command": "csdevkit.addNewFileFromNewFileMenu",
+    },
+    // for enabled alt+n
+    {
+        "key": "alt+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "shift+alt+n",
         "command": "explorer.newFolder",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-    },
-    {
-        "key": "a",
-        "command": "csharpextensions.createClass",
-        "when": "listFocus"
-    },
-    {
-        "key": "alt+a",
-        "command": "csharpextensions.createInterface",
-        "when": "listFocus"
-    },
-    {
-        "key": "f",
-        "command": "list.find",
-        "when": "listFocus"
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && !findInputFocussed"
     },
     {
         "key": "alt+f",
+        "command": "list.find",
+        "when": "listFocus  && !inputFocus && !findInputFocussed"
+    },
+    {
+        "key": "shift+alt+f",
         "command": "filesExplorer.findInWorkspace",
-        "when": "listFocus"
+        "when": "listFocus  && !inputFocus && !findInputFocussed"
     },
     {
-        "key": "d",
-        "command": "deleteFile",
-        "when": "listFocus"
+        "key": "alt+d",
+        "command": "csdevkit.deleteItem",
+        "when": "listFocus && !findInputFocussed"
     },
     {
-        "key": "x",
+        "key": "alt+x",
         "command": "filesExplorer.cut",
-        "when": "listFocus"
+        "when": "listFocus && !findInputFocussed"
     },
     {
-        "key": "u",
+        "key": "alt+u",
         "command": "filesExplorer.cancelCut",
-        "when": "listFocus"
+        "when": "listFocus && !findInputFocussed"
     },
     {
-        "key": "r",
+        "key": "alt+r",
         "command": "renameFile",
-        "when": "listFocus"
+        "when": "listFocus && !findInputFocussed"
     },
     {
-        "key": "y",
+        "key": "alt+y",
         "command": "filesExplorer.copy",
-        "when": "listFocus"
+        "when": "listFocus && !findInputFocussed"
     },
     {
-        "key": "p",
+        "key": "alt+p",
         "command": "filesExplorer.paste",
-        "when": "listFocus"
+        "when": "listFocus && !findInputFocussed"
     },
     //
     // file navigation
@@ -148,6 +149,11 @@
         "command": "workbench.action.terminal.toggleTerminal",
     },
     {
+        "key": "Escape",
+        "command": "workbench.action.focusLastEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
         "key": "alt+k",
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus"
@@ -174,16 +180,6 @@
                 "workbench.scm.action.focusNextResourceGroup"
             ]
         }
-    },
-    {
-        "key": "shift+,",
-        "command": "workbench.action.compareEditor.previousChange",
-        "when": "workbench.scm.visible"
-    },
-    {
-        "key": "shift+.",
-        "command": "workbench.action.compareEditor.nextChange",
-        "when": "workbench.scm.visible"
     },
     //
     // testing
