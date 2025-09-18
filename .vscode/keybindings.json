@@ -1,171 +1,84 @@
-[
-    //
-    // explorer
-    //
+[  
     {
-        "key": "cmd+e",
-        "command": "solutionExplorer.focus",
-        "when": "!solutionExplorer.visible"
-    },
-    {
-        "key": "cmd+e",
-        "command": "runCommands",
-        "args": {
-            "commands": [
-                "solutionExplorer.removeView",
-                "workbench.explorer.fileView.focus"
-            ]
-        },
-        "when": "solutionExplorer.visible"
-    },
-    {
-        "key": "Escape",
-        "command": "workbench.action.focusLastEditorGroup",
-        "when": "solutionExplorer.active && !inputFocus && !findInputFocussed"
-    },
-    {
-        "key": "alt+g",
-        "command": "list.focusFirst",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && !findInputFocussed"
-    },
-    {
-        "key": "shift+alt+g",
-        "command": "list.focusLast",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && !findInputFocussed"
-    },
-    {
-        "key": "alt+t",
-        "command": "workbench.action.terminal.newWithCwd",
-        "args": {
-            "cwd": "${fileDirname}"
-        },
-        "when": "solutionExplorer.visible && !inputFocus && !findInputFocussed"
-    },
-    {
-        "key": "alt+n",
-        "command": "csdevkit.addNewFileFromNewFileMenu",
-    },
-    // for enabled alt+n
-    {
-        "key": "alt+n",
-        "command": "-workbench.action.files.newUntitledFile"
-    },
-    {
-        "key": "shift+alt+n",
-        "command": "explorer.newFolder",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && !findInputFocussed"
-    },
-    {
-        "key": "alt+f",
-        "command": "list.find",
-        "when": "listFocus  && !inputFocus && !findInputFocussed"
-    },
-    {
-        "key": "shift+alt+f",
-        "command": "filesExplorer.findInWorkspace",
-        "when": "listFocus  && !inputFocus && !findInputFocussed"
-    },
-    {
-        "key": "alt+d",
-        "command": "csdevkit.deleteItem",
-        "when": "listFocus && !findInputFocussed"
-    },
-    {
-        "key": "alt+x",
-        "command": "filesExplorer.cut",
-        "when": "listFocus && !findInputFocussed"
-    },
-    {
-        "key": "alt+u",
-        "command": "filesExplorer.cancelCut",
-        "when": "listFocus && !findInputFocussed"
-    },
-    {
-        "key": "alt+r",
-        "command": "renameFile",
-        "when": "listFocus && !findInputFocussed"
-    },
-    {
-        "key": "alt+y",
-        "command": "filesExplorer.copy",
-        "when": "listFocus && !findInputFocussed"
-    },
-    {
-        "key": "alt+p",
-        "command": "filesExplorer.paste",
-        "when": "listFocus && !findInputFocussed"
+        "key": "alt+space",
+        "command": "workbench.action.showCommands",
     },
     //
     // file navigation
     //
     {
         "key": "cmd+,",
-        "command": "workbench.action.navigateBack"
+        "command": "workbench.action.nextEditor"
     },
     {
         "key": "cmd+.",
-        "command": "workbench.action.navigateForward"
+        "command": "workbench.action.previousEditor"
     },
     {
-        "key": "shift+cmd+f",
-        "command": "workbench.action.quickTextSearch"
+        "key": "cmd+q",
+        "command": "workbench.action.quickOpen",
     },
     {
-        "key": "cmd+f",
-        "command": "workbench.action.quickOpen"
-    },
-    //
-    // text edit
-    //
-    {
-        "key": "alt+h",
-        "command": "editor.action.quickFix"
-    },
-    {
-        "key": "alt+.",
-        "command": "editor.gotoNextFold",
-        "when": "editorFocus"
-    },
-    {
-        "key": "alt+,",
-        "command": "editor.gotoPreviousFold",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+f",
-        "command": "editor.action.format",
-        "when": "editorFocus"
-    },
-    {
-        "key": "alt+enter",
-        "command": "editor.action.showContextMenu",
+        "key": "cmd+w",
+        "command": "workbench.action.closeActiveEditor",
         "when": "editorFocus"
     },
     //
-    // terminal
+    // windows
     //
     {
-        "key": "cmd+t",
-        "command": "workbench.action.terminal.toggleTerminal",
+        "key": "cmd+o cmd+r",
+        "command": "workbench.action.openRecent",
+    },
+    {
+        "key": "cmd+o cmd+s",
+        "command": "csdevkit.openSolution",
+    },
+    {
+        "key": "cmd+o cmd+f",
+        "command": "vscode.openFolder",
+    },
+    // explorer
+    {
+        "key": "cmd+e",
+        "command": "solutionExplorer.focus",
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.closeSidebar",
+        "when": "(solutionExplorer.visible || scmViewMode) && !editorFocus"
     },
     {
         "key": "Escape",
         "command": "workbench.action.focusLastEditorGroup",
-        "when": "terminalFocus"
+        "when": "solutionExplorer.active && !inputFocus && !findInputFocussed"
     },
+    // file explorer
     {
-        "key": "alt+k",
-        "command": "workbench.action.terminal.kill",
-        "when": "terminalFocus"
+        "key": "cmd+f",
+        "command": "workbench.explorer.fileView.focus",
     },
+    // bottom panel
     {
         "key": "alt+m",
         "command": "workbench.action.toggleMaximizedPanel",
-        "when": "terminalFocus"
     },
-    //
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.closePanel",
+        "when": "panelFocus && !editorFocus"
+    },
+    // problems
+    {
+        "key": "cmd+p",
+        "command": "workbench.actions.view.problems",
+    },
+    // terminal
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.terminal.focus",
+    },
     // source control
-    //
     {
         "key": "cmd+b",
         "command": "git.checkout"
@@ -181,11 +94,56 @@
             ]
         }
     },
-    //
     // testing
-    //
     {
         "key": "cmd+u",
         "command": "workbench.view.testing.focus"
     },
+    //
+    // new items
+    //
+    {
+        "key": "alt+n",
+        "command": "csdevkit.addNewFileFromNewFileMenu",
+    },
+    // for enabled alt+n
+    {
+        "key": "alt+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "shift+alt+n",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && !findInputFocussed"
+    },
+    {
+        "key": "alt+d",
+        "command": "csdevkit.deleteItem",
+        "when": "listFocus && !findInputFocussed"
+    },
+    {
+        "key": "alt+x",
+        "command": "filesExplorer.cut",
+        "when": "listFocus && !findInputFocussed"
+    },
+    {
+        "key": "alt+u",
+        "command": "filesExplorer.cancelCut",
+       "when": "listFocus && !findInputFocussed"
+    },
+    {
+        "key": "alt+r",
+        "command": "renameFile",
+        "when": "listFocus && !findInputFocussed"
+    },
+    {
+        "key": "alt+y",
+        "command": "filesExplorer.copy",
+        "when": "listFocus && !findInputFocussed"
+    },
+    {
+        "key": "alt+p",
+        "command": "filesExplorer.paste",
+        "when": "listFocus && !findInputFocussed"
+    }, 
 ]

@@ -6,6 +6,10 @@
         "asvetliakov.vscode-neovim": 1
     },
     //
+    // dotnet
+    //
+    "nuget.includePrereleasePackageVersions": true,
+    //
     // file edit
     //
     "files.autoSave": "afterDelay",
@@ -20,54 +24,12 @@
     //
     "git.autofetch": true,
     "git.openRepositoryInParentFolders": "always",
-    //
-    // vim
-    //
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+    // neovim
+    "vscode-neovim.compositeKeys": {
+        "jj": {
+            "command": "vscode-neovim.escape",
         },
-        {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<Esc>"
-            ],
-            "commands": [
-                "workbench.action.files.save"
-            ]
-        }
-    ],
-    "vim.normalModeKeyBindings": [
-        {
-            "before": [
-                "o"
-            ],
-            "after": [
-                "o",
-                "<Esc>"
-            ],
-            "when": "editorTextFocus && vim.active"
-        },
-        {
-            "before": [
-                "O"
-            ],
-            "after": [
-                "O",
-                "<Esc>"
-            ],
-            "when": "editorTextFocus && vim.active"
-        }
-    ],
+    },
     "workbench.editor.showTabs": "single",
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
@@ -136,7 +98,28 @@
         }
     },
     "terminal.integrated.stickyScroll.enabled": true,
-    "workbench.activityBar.location": "hidden",
     "diffEditor.hideUnchangedRegions.enabled": true,
     "diffEditor.renderSideBySide": false,
+    "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",
+    "workbench.activityBar.location": "hidden",
+    "workbench.layoutControl.type": "menu",
+    "gitlens.views.scm.grouped.default": "contributors",
+    "gitlens.views.scm.grouped.views": {
+        "commits": true,
+        "branches": true,
+        "remotes": true,
+        "stashes": true,
+        "tags": true,
+        "worktrees": true,
+        "contributors": false,
+        "fileHistory": false,
+        "repositories": true,
+        "searchAndCompare": false,
+        "launchpad": false
+    },
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command"
+    ],
 }
