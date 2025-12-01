@@ -111,4 +111,5 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=cyan'
+alias n="nvim"
+alias lg="lazygit"
