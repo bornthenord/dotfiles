@@ -9,6 +9,7 @@ save_to_clipboard = true
 
 [font]
 size = 17
+normal.family = "Hack Nerd Font"
 
 [env]
 TERM = "xterm-256color"
