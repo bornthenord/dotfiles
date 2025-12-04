@@ -21,5 +21,5 @@ position.y = 900
 dimensions.columns = 140
 dimensions.lines = 30
 decorations = "Full"
-opacity = 0.50
+opacity = 0.70
 blur = true
