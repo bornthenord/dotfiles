@@ -1,7 +1,6 @@
 [keyboard]
 bindings = [
 	{ key = "Space", mods = "Option", action = "ToggleViMode" },
-	{ key = "Escape", mode = "AppCursor", chars = "\u0015" },
 	{ key = "C", mods = "Command", action = "Copy" },
 	{ key = "P", mods = "Command", action = "Paste" },
  	{ key = "J", mods = "Alt", chars = "\u001bB" },
