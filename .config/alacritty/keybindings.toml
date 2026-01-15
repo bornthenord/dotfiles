@@ -5,6 +5,4 @@ bindings = [
 	{ key = "P", mods = "Command", action = "Paste" },
  	{ key = "J", mods = "Alt", chars = "\u001bB" },
   	{ key = "K", mods = "Alt", chars = "\u001bF" },
-	{ key = "H", mods = "Alt", chars = "\u0001" },
-	{ key = "L", mods = "Alt", chars = "\u0005" },
 ]

@@ -16,10 +16,12 @@ TERM = "xterm-256color"
 
 [window]
 startup_mode = "Windowed"
+padding.x = 10
+padding.y = 10
 position.x = 1200
 position.y = 900
 dimensions.columns = 140
 dimensions.lines = 30
-decorations = "Full"
+decorations = "Buttonless"
 opacity = 0.90
 blur = true
