@@ -19,7 +19,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 20
+accordion-padding = 5
 
 # Possible values: tiles|accordion
 default-root-container-layout = 'accordion'
@@ -208,9 +208,7 @@ on-mode-changed = []
     esc = ['reload-config', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
-    backspace = ['close-all-windows-but-current', 'mode main']
-
-    # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
+    backspace = ['close-all-windows-but-current', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     #s = ['layout sticky tiling', 'mode main']
 
     alt-shift-h = ['join-with left', 'mode main']
@@ -230,6 +228,9 @@ run = "move-node-to-workspace C"
 [[on-window-detected]]
 if.app-id = 'net.whatsapp.WhatsApp'
 run = "move-node-to-workspace C"
+[[on-window-detected]]
+if.app-id = 'Mattermost.Desktop'
+run = "move-node-to-workspace C"
 
 #[D]evelopment
 [[on-window-detected]]
@@ -242,19 +243,24 @@ run = "move-node-to-workspace D"
 if.app-id = 'com.apple.dt.Xcode'
 run = "move-node-to-workspace D"
 
-#[E]xplore
+#[F]iles
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = "move-node-to-workspace F"
+[[on-window-detected]]
+if.app-id = 'org.alacritty'
+run = "move-node-to-workspace F"
+
+#[W]eb
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
-run = "move-node-to-workspace E"
+run = "move-node-to-workspace W"
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
-run = "move-node-to-workspace E"
+run = "move-node-to-workspace W"
 [[on-window-detected]]
 if.app-id = 'org.torproject.torbrowser'
-run = "move-node-to-workspace E"
-[[on-window-detected]]
-if.app-id = 'ru.yandex.desktop.yandex-browser'
-run = "move-node-to-workspace E"
+run = "move-node-to-workspace W"
 
 #[M]edia
 [[on-window-detected]]
@@ -275,4 +281,7 @@ run = "move-node-to-workspace O"
 #[U]tils
 [[on-window-detected]]
 if.app-id = 'com.docker.docker'
+run = "move-node-to-workspace U"
+[[on-window-detected]]
+if.app-id = 'app.hiddify.com'
 run = "move-node-to-workspace U"
