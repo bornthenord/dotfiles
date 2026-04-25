@@ -247,6 +247,9 @@ run = "move-node-to-workspace D"
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = "move-node-to-workspace F"
+[[on-window-detected]]
+if.app-id = 'org.alacritty'
+run = "move-node-to-workspace F"
 
 #[W]eb
 [[on-window-detected]]
