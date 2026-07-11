@@ -1,5 +1,5 @@
 # Theme
-theme = Ayu Mirage
+theme = gruvbox-material-hard-dark
 
 # Contrast
 minimum-contrast = 1.3
