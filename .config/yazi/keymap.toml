@@ -1,0 +1,4 @@
+[[mgr.prepend_keymap]]
+on   = [ "c", "y" ]
+run  = "shell 'pbcopy < \"$@\"' --confirm"
+desc = "Copy file contents to clipboard"
