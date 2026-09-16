@@ -26,3 +26,6 @@ cursor-style = block
 
 # Mouse
 mouse-hide-while-typing = true
+
+# Close without confirm
+confirm-close-surface = false
