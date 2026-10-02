@@ -1,0 +1,29 @@
+# Quiet Light
+# Based on the VS Code Quiet Light color scheme
+
+background = #F5F5F5
+foreground = #705697
+
+cursor-color = #705697
+cursor-text = #F5F5F5
+
+selection-background = #A2C693
+selection-foreground = #705697
+
+palette = 0=#000000
+palette = 1=#AA3731
+palette = 2=#777777
+palette = 3=#DAAA01
+palette = 4=#705697
+palette = 5=#BC3FBC
+palette = 6=#705697
+palette = 7=#666666
+
+palette = 8=#666666
+palette = 9=#CD3131
+palette = 10=#70A55B
+palette = 11=#DAAA01
+palette = 12=#705697
+palette = 13=#BC3FBC
+palette = 14=#0FA8CD
+palette = 15=#777777

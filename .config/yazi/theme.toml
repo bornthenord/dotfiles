@@ -1,0 +1,4 @@
+# Overrides on top of the default (light) theme:
+# hovered file row in the list = light green background with dark grey text.
+[indicator]
+current = { fg = "#333333", bg = "#A2C693" }
